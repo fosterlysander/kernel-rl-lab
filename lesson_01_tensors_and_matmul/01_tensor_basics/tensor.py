@@ -18,3 +18,8 @@ for name, x in [("s", s), ("v", v), ("M", M), ("T", T)]:
 # v (3,) 1 float64
 # M (2, 3) 2 int64
 # T (2, 3, 4) 3 float64
+
+# 计算张量有多大
+x = np.zeros((32,128,768),dtype=np.float32)
+print(x.size) # 32*128*768
+print(x.nbytes) # 32*128*768*4 元素个数*字节数 float32占据4个字节 约12M
